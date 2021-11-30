@@ -5,3 +5,12 @@ const App = () => {
 }
 
 export default App
+
+// const App = () => {
+//   return (
+//     <Routes>
+//       <Route exact path="/" component={Buisnesses}/>
+//       <Route exact path="/buisnesses/:slug" component={Buisness}/>
+//     </Routes>
+//     )
+// }
