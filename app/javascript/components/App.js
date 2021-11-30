@@ -1,16 +1,15 @@
 import React from 'react'
+import { Route, Switch} from 'react-router-dom'
+import Buisness from './Buisness/Buisness'
+import Buisnesses from './Buisnesses/Buisnesses'
 
 const App = () => {
-  return (<div>Hello World</div>)
+  return (
+    <Switch>
+      <Route exact path="/" component={Buisnesses}/>
+      <Route exact path="/buisnesses/:slug" component={Buisness}/>
+    </Switch>
+    )
 }
 
 export default App
-
-// const App = () => {
-//   return (
-//     <Routes>
-//       <Route exact path="/" component={Buisnesses}/>
-//       <Route exact path="/buisnesses/:slug" component={Buisness}/>
-//     </Routes>
-//     )
-// }
