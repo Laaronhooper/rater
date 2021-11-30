@@ -6,6 +6,7 @@ require 'faker'
   buisness = Buisness.create(
     name: Faker::Company.name,
     image_url: "http://www..com"
+    slug: ""
   )
   buisness.save!
 end
