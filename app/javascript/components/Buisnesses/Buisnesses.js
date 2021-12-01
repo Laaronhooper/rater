@@ -4,7 +4,32 @@ import axios from 'axios'
 import Buisness from "./Buisness"
 import styled from 'styled-components'
 
+const Home = styled.div`
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
+`
+const Header = styled.div`
+padding: 100px 100xp 10px 100px;
+
+h1 {
+  font-size: 42px;
+}
+`
+
+const Subheader = styled.div`
+  font-weight: 300;
+  font-size: 26px;
+`
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 20px;
+`
 
 const Buisnesses = () => {
   const [buisnesses, setBuisnesses] = useState([])
@@ -29,15 +54,15 @@ const grid = buisnesses.map( item => {
 })
 
   return (
-    <div className="home">
-      <div className="header">
+    <Home>
+      <Header>
         <h1>Buisness Reviews</h1>
-        <div className="subHeader">Reviews for buisnesses far and wide</div>
-        <div className="grid"> 
-          <ul>{grid}</ul>
-        </div>
-      </div>
-    </div>
+        <Subheader>Reviews for buisnesses far and wide</Subheader>
+      </Header>
+      <Grid>
+        {grid}
+      </Grid>
+    </Home>
   )
 }
 
