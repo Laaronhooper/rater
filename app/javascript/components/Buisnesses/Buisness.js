@@ -1,12 +1,17 @@
 import React from 'react'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
-const Buisness = () => {
+const Buisness = (props) => {
   return (
     <div className="card">
-      <div className="buisness-logo"></div>
-      <div className="buisness-name"></div>
-      <div className="buisness-score"></div>
-      <div className="buisness-link"></div>
+      <div className="buisness-logo"><img src={props.attributes.image_url} alt={props.attributes.name}/></div>
+      <div className="buisness-name">{props.attributes.name}</div>
+      <div className="buisness-score">{props.attributes.average_score}</div>
+      <div className="buisness-link">
+        <Link to={`/buisnesses/${props.attributes.slug}`}>View Airline</Link>
+      </div>
     </div>
   )
 }
+
+export default Buisness

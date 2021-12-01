@@ -1,6 +1,10 @@
 // import { useEffect, useState } from "react"
 import React, { useState, useEffect, Fragment } from "react"
 import axios from 'axios'
+import Buisness from "./Buisness"
+import styled from 'styled-components'
+
+
 
 const Buisnesses = () => {
   const [buisnesses, setBuisnesses] = useState([])
@@ -15,8 +19,13 @@ const Buisnesses = () => {
     .catch(resp => console.log(resp))
   }, [buisnesses.length])
 
-const list = buisnesses.map( item => {
-  return (<li key={item.attributes.name}>{item.attributes.name}</li>)
+const grid = buisnesses.map( item => {
+  return (
+    <Buisness 
+      key={item.attributes.name}
+      attributes={item.attributes}
+      />
+      )
 })
 
   return (
@@ -25,7 +34,7 @@ const list = buisnesses.map( item => {
         <h1>Buisness Reviews</h1>
         <div className="subHeader">Reviews for buisnesses far and wide</div>
         <div className="grid"> 
-          <ul>{list}</ul>
+          <ul>{grid}</ul>
         </div>
       </div>
     </div>
