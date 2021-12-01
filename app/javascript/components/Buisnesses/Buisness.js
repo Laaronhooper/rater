@@ -8,7 +8,7 @@ const Buisness = (props) => {
       <div className="buisness-name">{props.attributes.name}</div>
       <div className="buisness-score">{props.attributes.average_score}</div>
       <div className="buisness-link">
-        <Link to={`/buisnesses/${props.attributes.slug}`}>View Airline</Link>
+        <Link to={`/buisnesses/${props.attributes.slug}`}>View Buisness</Link>
       </div>
     </div>
   )

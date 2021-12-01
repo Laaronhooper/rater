@@ -1,5 +1,6 @@
 class Buisness < ApplicationRecord
   has_many :reviews
+  has_one_attached :buisness_image
   before_create :slugify
 
   def slugify

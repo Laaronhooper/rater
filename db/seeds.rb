@@ -4,18 +4,25 @@
 Buisness.create([
   { 
     name: "McDonalds",
-    image_url: "https://rater.s3.amazonaws.com/McDonalds.png"
+    image_url: "rater/app/assets/images/McDonalds-logo.png"
   }, 
   { 
     name: "Hungry Jacks",
-    image_url: "https://rater.s3.amazonaws.com/Hungry-Jacks.png"
+    image_url: "./app/assets/images/McDonalds-logo.png"
   },
   { 
     name: "Subway",
-    image_url: "https://rater.s3.amazonaws.com/Subway.png" 
+    image_url: "/app/assets/images/McDonalds-logo.png"
   }, 
   { 
     name: "Tex-Mex",
     image_url: "https://rater.s3.amazonaws.com/Tex-Mex.png" 
   }
 ])
+
+# mcdonalds = Buisness.create(
+#     name: "McDonalds",
+#   )
+#   mcdonalds.buisness_image.attach(
+#     io: File.open(Rails.root.join("./app/assets/images/McDonalds-logo.png")),
+#       filename: 'McDonalds-logo.png')
