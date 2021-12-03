@@ -3,7 +3,7 @@ module Api
     class ReviewsController < ApplicationController
     protect_from_forgery with: :null_session    
     def create
-      review = Review.new(review_params)
+      review = buisness.reviews.new(review_params)
 
       if review.save
         render json: ReviewSerializer.new(review).serialized_json
@@ -24,6 +24,10 @@ module Api
      
 
     private
+
+    def buisness
+      @buisness ||= Buisness.find(params[:buisness_id])
+    end
 
     def review_params
       params.require(:review).permit(:title, :description, :score, :buisness_id)

@@ -26,3 +26,10 @@ Buisness.create([
 #   mcdonalds.buisness_image.attach(
 #     io: File.open(Rails.root.join("./app/assets/images/McDonalds-logo.png")),
 #       filename: 'McDonalds-logo.png')
+
+# hungry_jacks = Buisness.create(
+#     name: "hungry_jacks",
+#   )
+#   hungry_jacks.buisness_image.attach(
+#     io: File.open(Rails.root.join("./app/assets/images/McDonalds-logo.png")),
+#       filename: 'McDonalds-logo.png')

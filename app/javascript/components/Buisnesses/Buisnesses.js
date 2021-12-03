@@ -35,12 +35,8 @@ const Buisnesses = () => {
   const [buisnesses, setBuisnesses] = useState([])
 
   useEffect(()=> {
-    //get all buisnesses from api
-    //update buisnesses
     axios.get('api/v1/buisnesses.json')
-    .then(resp => {
-      setBuisnesses(resp.data.data)
-    })
+    .then(resp => setBuisnesses(resp.data.data))
     .catch(resp => console.log(resp))
   }, [buisnesses.length])
 
@@ -49,8 +45,8 @@ const grid = buisnesses.map( item => {
     <Buisness 
       key={item.attributes.name}
       attributes={item.attributes}
-      />
-      )
+    />
+  )
 })
 
   return (
