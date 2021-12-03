@@ -65,6 +65,12 @@ const Buisness = (props) => {
     .catch(resp => {})
   }
 
+  const setRating = (score, e) => {
+    e.preventDefault()
+
+    setReview({...review, score})
+  }
+
   return( 
     <Wrapper>
       {
@@ -83,6 +89,7 @@ const Buisness = (props) => {
             <ReviewForm
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            setRating={setRating}
             attributes={buisness.data.attributes}
             review={review}
             />
